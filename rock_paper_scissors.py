@@ -1,6 +1,6 @@
 import random
 # First we make sure the player wants to start playing or not
-print('Are you ready for the most exiting game of Rock, Paper, Scissors ever? Y/N')
+print('Are you ready for the most exiting game of Rock, Paper, Scissors ever?')
 ready_or_not = input('Type in your answer here. [Y]es or [N]o? ').lower()
 mistake_counter = 0
 
@@ -15,7 +15,7 @@ while True:
     else:
         if mistake_counter == 0:
             print('This is an invalid command. I hope this was an honest mistake and you\'re not trying to test my'
-                  ' capabilities. Just type Y to start playing or N to exit the program: ', end='')
+                  ' patience. Just type Y to start playing or N to exit the program: ', end='')
             mistake_counter += 1
             ready_or_not = input().lower()
         elif mistake_counter == 1:
@@ -66,4 +66,13 @@ while True:
 
 print(f'You have chosen: {players_choice} This is a wise choice. It\'s proven to be one of the Top 3 best choices you '
       f'can make. You\'re clearly good at this game, but let\'s see what your mighty opponent has prepared for you.')
+
+computer_random_move = random.randint(1, 3)
+computer_choice = ''
+if computer_random_move == 1:
+    computer_choice = 'Rock'
+elif computer_random_move == 2:
+    computer_choice = 'Paper'
+elif computer_random_move == 3:
+    computer_choice = 'Scissors'
 
