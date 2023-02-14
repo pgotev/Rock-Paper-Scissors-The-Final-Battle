@@ -76,3 +76,20 @@ elif computer_random_move == 2:
 elif computer_random_move == 3:
     computer_choice = 'Scissors'
 
+print(f'The computer picks: {computer_choice}')
+
+match_result = ''
+if players_choice == computer_choice:
+    match_result = 'Draw'
+elif (players_choice == 'Rock' and computer_choice == 'Scissors' or
+      players_choice == 'Paper' and computer_choice == 'Rock' or
+      players_choice == 'Scissors' and computer_choice == 'Paper'):
+    match_result = 'Player wins'
+elif (players_choice == 'Rock' and computer_choice == 'Paper' or
+      players_choice == 'Paper' and computer_choice == 'Scissors' or
+      players_choice == 'Scissors' and computer_choice == 'Rock'):
+    match_result = 'Computer wins'
+
+print(match_result)
+
+
